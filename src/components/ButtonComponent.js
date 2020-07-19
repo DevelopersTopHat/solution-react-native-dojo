@@ -7,24 +7,29 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 const ButtonComponent = props => {
   return (
     <View style={styles.buttonContainer}>
-      <Icon
-        name="remove"
-        size={30}
-        color="white"
-        onPress={() => {
-          props.onPressRemove(props.item);
-        }}
-        style={styles.button}
-      />
-      <Icon
-        name="add"
-        size={30}
-        color="white"
-        onPress={() => {
-          props.onPressAdd(props.item);
-        }}
-        style={styles.button}
-      />
+      {/* This buttonWrapper is a workaround for iOS because the Icon element is acutually Text, which doesn't accept the borderRadius property. */}
+      <View style={styles.buttonWrapper}>
+        <Icon
+          name="remove"
+          size={30}
+          color="white"
+          onPress={() => {
+            props.onPressRemove(props.item);
+          }}
+          style={styles.button}
+        />
+      </View>
+      <View style={styles.buttonWrapper}>
+        <Icon
+          name="add"
+          size={30}
+          color="white"
+          onPress={() => {
+            props.onPressAdd(props.item);
+          }}
+          style={styles.button}
+        />
+      </View>
     </View>
   );
 };
@@ -39,8 +44,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
   },
+  // Allows the Icon to be a circle
+  buttonWrapper: {
+    borderRadius: 150,
+    overflow: 'hidden',
+  },
   button: {
     backgroundColor: '#005457',
-    borderRadius: 150,
   },
 });

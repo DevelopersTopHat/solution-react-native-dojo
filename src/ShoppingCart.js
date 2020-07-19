@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {createStackNavigator} from 'react-navigation';
-import {View} from 'react-native';
+import {View, StatusBar} from 'react-native';
 
 import HomeScreen from './screens/HomeScreen';
 import CartScreen from './screens/CartScreen';
@@ -8,7 +8,13 @@ import ShoppingCartIcon from './components/ShoppingCartIcon';
 
 export default class ShoppingCart extends Component {
   render() {
-    return <AppStackNavigator />;
+    return (
+      <>
+        {/* Bar style is an iOS specific prop, and thus only changes for that OS. */}
+        <StatusBar barStyle='light-content'/>
+        <AppStackNavigator />
+      </>
+    );
   }
 }
 
