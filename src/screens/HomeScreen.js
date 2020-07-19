@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {View} from 'react-native';
+import {View, Platform, StatusBar} from 'react-native';
 import ProductCatalog from '../components/ProductCatalog';
 import {connect} from 'react-redux';
 
@@ -16,7 +16,9 @@ import {ADD_TO_CART, REMOVE_FROM_CART} from '../reducers/types';
 class HomeScreen extends Component {
   static navigationOptions = {
     headerTitleContainerStyle: {
-      right: 0, // there is no back button on this screen, so this helps center the title
+      // on Android the title doesn't center properly since there is no back button on this screen
+      // This is an example of how platform specific styling can be done (although it is a bit scuffed since I did it on the fly)
+      right: (Platform.OS === 'android') ? 0 : '15%'
     },
   };
   
