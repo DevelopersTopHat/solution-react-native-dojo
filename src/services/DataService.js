@@ -21,38 +21,6 @@ const electronics = [
     description: "You can yell at it to tell you the weather."  
   },
   {
-    id: 3,
-    name: 'Bose QC 35 Headphones',
-    price: 300,
-    image:
-      'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRymoYPbD9EyfX_OD1iNALNaXPthgnS3RYi2zam749SWIJQxy6Flv46EmJ2RiV14BDtbvEAxTD6xcKNUAprNry2WTPWMIyKcWhh2XwDg-c9pJ6wocUxuWWv&usqp=CAc',
-    description: "Sometimes you only want sound from your headphones, not outside."  
-  },
-  {
-    id: 4,
-    name: 'Potato Clock',
-    price: 344.99,
-    image:
-      'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQY1HVnpvjue0eu-MEf0Svb_iSTCht5rL4ZCg92-pZ-lzaBvBVSG55bEE_tZ4NAYinbRd63Gtec4gAyaykrYuaXDpHtYuhM6a2ibMFEqxEl6EMNMRCS1k8klg&usqp=CAc',
-    description: "Clock sold separately."  
-  },
-  {
-    id: 5,
-    name: 'Google Home',
-    price: 222,
-    image:
-      'data:image/webp;base64,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',
-    description: "You can yell at this to tell you the weather, Google edition."  
-  },
-  {
-    id: 6,
-    name: 'Usb',
-    price: 10,
-    image:
-      'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSeoSI5FOKtJEWIwAfHDducOcBorC3-XyixLhHvnGqkG-qpr6-xLsFcuQPTahNkDqheDbBRlnylFw-loe7ar36ChV_fG_TNHWdsX8BoBZZuKHVXi3AIpFFS&usqp=CAc',
-    description: "Description here"  
-  },
-  {
     id: 7,
     name: 'Lemon clock',
     price: 49.99,
