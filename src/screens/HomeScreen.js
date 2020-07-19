@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {View, Platform, StatusBar} from 'react-native';
+import {View, Platform} from 'react-native';
 import ProductCatalog from '../components/ProductCatalog';
 import {connect} from 'react-redux';
 
