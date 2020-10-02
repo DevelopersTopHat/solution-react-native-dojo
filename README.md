@@ -5,7 +5,7 @@
 
 ## Challenge URL:
 
-https://github.com/DevelopersTopHat/slalomdojo-react-native
+https://github.com/DevelopersTopHat/react-native-dojo
 
 ## Project Description
 
